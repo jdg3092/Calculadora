@@ -1,6 +1,6 @@
 const numeros = document.querySelectorAll('.numeros');
 const resultados = document.querySelector('.resultado span');
-const signs = document.querySelector('.sign');
+const signs = document.querySelectorAll('.sign');
 const equals = document.querySelector('.igual');
 const clear = document.querySelector('.borrar');
 const negative = document.querySelector('.negativo');
@@ -38,6 +38,7 @@ function getSecondValue(el){
         resultados.innerHTML = segundoNumero;
         segundoNumero = +segundoNumero;
     }
+   
 
 }
 function getSigno(){
@@ -49,11 +50,11 @@ function getSigno(){
         })
 
     }
-
+    
 }
 getSigno();
 
-equals.addEventListener('click', (e) => {
+equals.addEventListener('click', () => {
     resultados.innerHTML = "";
     if(sign === "+"){
         resultadoOperacion = primerNumero + segundoNumero;
@@ -64,5 +65,5 @@ equals.addEventListener('click', (e) => {
     } else if(sign === "/") {
         resultadoOperacion = primerNumero / segundoNumero; 
     }
-    resultados.innerHTML = resultadoOperacion
+    resultados.innerHTML = resultadoOperacion;
 })
