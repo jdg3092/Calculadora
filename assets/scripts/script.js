@@ -104,3 +104,13 @@ percent.addEventListener('click', () => {
     resultados.innerHTML = resultadoOperacion;
 
 })
+
+clear.addEventListener('click', () => {
+    resultados.innerHTML = 0;
+    primerNumero = "";
+    esPrimerNumero = false;
+    segundoNumero = "";
+    esSegundoNumero = false;
+    sign = "";
+    resultadoOperacion = 0;
+})
