@@ -67,3 +67,5 @@ equals.addEventListener('click', () => {
     }
     resultados.innerHTML = resultadoOperacion;
 })
+
+
