@@ -66,6 +66,28 @@ equals.addEventListener('click', () => {
         resultadoOperacion = primerNumero / segundoNumero; 
     }
     resultados.innerHTML = resultadoOperacion;
+    primerNumero = resultadoOperacion;
+    segundoNumero = "";
+
+    comprobarResultadoLenght();
 })
 
+function comprobarResultadoLenght(){
+     resultadoOperacion = JSON.stringify(resultadoOperacion);
+     if(resultadoOperacion.length >= 8 ){
+        resultadoOperacion = JSON.parse(resultadoOperacion);
+        resultados.innerHTML = resultadoOperacion.toFixed(5);
+     }
+}
 
+negative.addEventListener('click', () => {
+    resultados.innerHTML = "";
+    if(primerNumero != ""){
+        resultadoOperacion = -primerNumero / 100;
+        primerNumero = resultadoOperacion;
+    }
+    if(primerNumero != "" && segundoNumero != "" && sign != ""){
+        resultadoOperacion = -resultadoOperacion
+    }
+    resultados.innerHTML = resultadoOperacion;
+})
