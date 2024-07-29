@@ -83,11 +83,24 @@ function comprobarResultadoLenght(){
 negative.addEventListener('click', () => {
     resultados.innerHTML = "";
     if(primerNumero != ""){
-        resultadoOperacion = -primerNumero / 100;
+        resultadoOperacion = -primerNumero;
         primerNumero = resultadoOperacion;
     }
     if(primerNumero != "" && segundoNumero != "" && sign != ""){
-        resultadoOperacion = -resultadoOperacion
+        resultadoOperacion = -resultadoOperacion;
     }
     resultados.innerHTML = resultadoOperacion;
+})
+
+percent.addEventListener('click', () => {
+    resultados.innerHTML = "";
+    if(primerNumero != ""){
+        resultadoOperacion = primerNumero / 100;
+        primerNumero = resultadoOperacion;
+    }
+    if(primerNumero != "" && segundoNumero != "" && sign != ""){
+        resultadoOperacion = resultadoOperacion / 100;
+    }
+    resultados.innerHTML = resultadoOperacion;
+
 })
